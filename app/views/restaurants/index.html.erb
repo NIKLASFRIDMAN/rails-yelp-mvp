@@ -1,0 +1,13 @@
+<h1>All Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+<table class="table table-striped d-flex justify-content-around">
+
+<tr>
+<td scope="row"><%= link_to restaurant.name, restaurant_path(restaurant),  class: "btn btn-primary" %></td>
+<td scope="row"><%= restaurant.address %></td>
+<td scope="row"><%= restaurant.phone_number %></td>
+<td scope="row"><%= restaurant.category %></td>
+
+</tr>
+</table>
+<% end %>
